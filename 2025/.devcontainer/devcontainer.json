@@ -1,0 +1,21 @@
+{
+  "name": "Python Dev",
+  // Use the official Microsoft Python image
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  
+  // Configure tool-specific properties
+  "customizations": {
+    "vscode": {
+      "settings": { 
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+      ]
+    }
+  },
+
+  // Connect as a non-root user (standard security practice)
+  "remoteUser": "vscode"
+}
