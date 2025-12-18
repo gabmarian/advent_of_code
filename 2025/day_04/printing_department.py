@@ -6,8 +6,8 @@ import argparse
 def parse_input(lines):
     result = []
     for line in lines:
-        parsed_line = line.strip()
-        result.append(parsed_line)
+        row = list(line.strip())
+        result.append(row)
     return result
 
 
@@ -16,7 +16,7 @@ def remove_paper_rolls(map):
     new_map = []
 
     for x in range(0, len(map)):
-        new_map_line = map[x]
+        new_row = map[x]
 
         for y in range(0, len(map[x])):
             if map[x][y] != "@":
@@ -50,10 +50,10 @@ def remove_paper_rolls(map):
 
             if occupied_neighbors < 4:
                 removed_count += 1
-                new_map_line = new_map_line[:y] + "x" + new_map_line[y+1:]
+                new_row[y] = 'x'
 
-        new_map.append(new_map_line)
-        # print(new_map_line)
+        new_map.append(new_row)
+        print(new_row)
 
     return (new_map, removed_count)
 
