@@ -10,7 +10,7 @@
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
-            "args": ["--file","./day_05/input.txt"]
+            "args": ["--file","./day_06/input.txt"]
         }
     ]
 }
